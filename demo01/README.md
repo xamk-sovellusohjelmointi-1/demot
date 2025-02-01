@@ -90,5 +90,3 @@ Tapahtumakäsittelijä suoritetaan joka muutoksella, eli `nimi` päivittyy joka 
 
 <p>{nimi}</p>
 ```
-
-.
