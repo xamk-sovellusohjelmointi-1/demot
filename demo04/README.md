@@ -31,7 +31,7 @@ createRoot(document.getElementById('root')!).render(
 
 ## Demo 4: Sovelluksen rakentuminen MUI-komponenteilla (`App.tsx`)
 
-Tässä demossa ei rakenneta isoa tai monimutkaista sovellusta, vaan havainnollistetaan suoraan App-komponentissa päätasolla MUI-komponenttien käytön perusteita. Sovelluksena luodaan Oppimistehtävästä 1 tuttu uutiskirjeen tilaus, jossa "tilaa"-painike aktivoituu vasta kaikkien tietojen ollessa annettu. Napin toimintona tulostetaan selaimeen alert tilauksesta.
+Tässä demossa ei rakenneta isoa tai monimutkaista sovellusta, vaan havainnollistetaan suoraan App-komponentissa päätasolla MUI-komponenttien käytön perusteita. Sovelluksena luodaan Uutiskirjeen tilauslomake, jossa "tilaa"-painike aktivoituu vasta kaikkien tietojen ollessa annettu. Napin toimintona tulostetaan selaimeen alert tilauksesta.
 
 ![](./public/img/demo04-ui.jpg)
 
