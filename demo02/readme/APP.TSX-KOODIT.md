@@ -80,7 +80,7 @@ const [tehtavat, setTehtavat] = useState<Tehtava[]>([
                                         ]);
 ```
 
-Tilamuuttujan merkintä tapahtuu aivan samalla tavalla kuin yksittäisen merkkijonon kanssa, mutta koska tässä käsitellään arrayta `Tehtava`-olioista, mitää tyypitys muistaa tehdä oikein: `useState<Tehtava[]>`. Samalla on alustettu kolme tehtävää, joilla on nimi ja tehty-tieto.
+Tilamuuttujan merkintä tapahtuu aivan samalla tavalla kuin yksittäisen merkkijonon kanssa, mutta koska tässä käsitellään arrayta `Tehtava`-olioista, pitää tyypitys muistaa tehdä oikein: `useState<Tehtava[]>`. Samalla on alustettu kolme tehtävää, joilla on nimi ja tehty-tieto.
 
 Olion merkintä tapahtuu samalla tavalla aaltosulkeilla ja avain-arvo -parit eroteltuna pilkuilla omille riveilleen, kuten interfacen määrittelyssä.
 
@@ -223,7 +223,7 @@ Tehtävä voidaan lisätä myös painikkeella syöttökenttään. Tässä käyte
 }}>Lisää</button>
 ```
 
-Painikkeessa kutsutaa `lisaaTehtava`-metodia, joka vaatii parametrikseen merkkijonon, eli tässä tehtävän nimen. Nappi ei suoraan voi poimia input-kentästä syötettä, vaan tieto saadaan poimittua nyt input-kentän `ref`-ominaisuutta hyödyntäen, johon `uusiTehtävä`-vakio oli asetettu. Eli syötteen teksti poimitaan `uusiTehtava.current.value`-komennolla.
+Painikkeessa kutsutaan `lisaaTehtava`-metodia, joka vaatii parametrikseen merkkijonon, eli tässä tehtävän nimen. Nappi ei suoraan voi poimia input-kentästä syötettä, vaan tieto saadaan poimittua nyt input-kentän `ref`-ominaisuutta hyödyntäen, johon `uusiTehtävä`-vakio oli asetettu. Eli syötteen teksti poimitaan `uusiTehtava.current.value`-komennolla.
 
 Samalla viittausta hyödynnetään tekstikentän tyhjentämisessä.
 
@@ -265,9 +265,9 @@ JavaScriptissä array voidaan "mapata", jolloin `map()`-metodin callbackina suor
 </li>
 ```
 
-Tässä tehtävän lisaelementti muodostetaan ja sille määritellään `onClick`-tapahtuma, joka suoritetaan, kun käyttäjä klikkaa listaelementtiä. Tämä taas vaikuttaa listaelementin tekstin tulostukseen.
+Tässä tehtävän listaelementti muodostetaan ja sille määritellään `onClick`-tapahtuma, joka suoritetaan, kun käyttäjä klikkaa listaelementtiä. Tämä taas vaikuttaa listaelementin tekstin tulostukseen.
 
-1. `<li key={idx}`: Listaelementille asetetaan `key`-ominaisuus, joka toimii elementin yksilöivänä tunnisteena. Avaimena käytetään arraysta poimittavaa tehtävän indeksiä, jolla listatut tehtävät vastaavat alkuperäisen arrayn tehtäviä oikeassa järjestyksessä.
+1. `<li key={idx}`: Listaelementille asetetaan `key`-ominaisuus, joka toimii elementin yksilöivänä tunnisteena. Avaimena käytetään arraysta poimittavaa tehtävän indeksiä, jolloin listatut tehtävät vastaavat alkuperäisen arrayn tehtäviä oikeassa järjestyksessä.
 2. `onClick={() => { merkitseTehdyksi(idx); }}>`: Klikkauksen käsittelijässä kutsutaan `merkitseTehdyksi(idx)`-metodia, jonka parametrina annetaan mappauksesta saatava indeksi. Jos palataan ylemmäksi katsomaan `merkitseTehdyksi`-metodin kuvausta, se ottaa vastaan parametrina numeromuotoisen indeksin, jolla oikea tehtävä poimitaan arraysta ja sen `tehty`-arvo asetetaan päinvastaiseksi.
     - Parametrin vastaanottavaa metodia ei voida suoraan asettaa tapahtuman callbackiksi, vaan tämä pitää toteuttaa nuolifunktion avulla.
 3. ```tsx
