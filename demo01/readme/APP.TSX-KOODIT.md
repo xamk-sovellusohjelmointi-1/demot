@@ -154,11 +154,11 @@ Tapahtuman tiedot ovat yleensä olioita ja tapahtumat sisältävät paljon erila
 
 Tarkastellaan tapahtumaa selaimen kehittäjätyökaluilla (F12) komentokehotteessa (console). Input-kentän `onChange`-tapahtuma sisältää kuvan mukaisia tietoja:
 
-![](../public/img/onChange-tapahtuman-tiedot.jpg)
+![](./img/onChange-tapahtuman-tiedot.jpg)
 
 Tapahtuman tulostus voidaan myös tarkentaa tulostamaan vain `e.target.value` -tiedot:
 
-![](../public/img/onChange-tapahtuman-target-value.jpg)
+![](./img/onChange-tapahtuman-target-value.jpg)
 
 ### 5.3 Painike muodostaa tervehdyksen
 

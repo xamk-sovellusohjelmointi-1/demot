@@ -27,7 +27,7 @@ Windows-alustoilla on tänä päivänä oletuksena estetty tietoturvasyistä mui
 
 Asetus löytyy Windowsin järjestelmäasetusten "Kehittäjille"/"For developers" -osiosta. Täällä on asetus PowerShellille ja komentosarjojen suorittaminen paikallisesti kirjautumatta.
 
-![](../public/img/ps-asetus.jpg)
+![](./img/ps-asetus.jpg)
 
 ## 2. Vite-kehityspalvelimen portin konfigurointi
 

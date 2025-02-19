@@ -8,4 +8,4 @@ React-sovelluksen toimintaa ei tarvitse vielä ymmärtää kovin syvällisesti, 
 
 Index.html-sivu pitää siis ehdottomasti olla projektissa, jotta sovellus toimii, mutta tänne ei tarvitse tehdä muutoksia. Sivulla oleva `<div id="root">`-elementti toimii kehyksenä React-komponenteille. [React-sovelluksen juurikomponentti](../src/main.tsx) viittaa tähän HTML-elementtiin ja luo siitä React-juuren, jonka sisällä varsinaiset funktionaaliset komponentit renderöidään. Voidaan myös puhua tulostamisesta, näyttämisestä jne.
 
-![](../public/img/react-havainnollistus.jpg)
+![](./img/react-havainnollistus.jpg)

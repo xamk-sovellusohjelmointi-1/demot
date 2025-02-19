@@ -57,6 +57,7 @@ const App : React.FC = () : React.ReactElement => {
         type="text" 
         placeholder="Kirjoita tehtävä ja paina enter..."
         onKeyDown={(e : any) => {
+          console.log(e.key);
           if (e.key === "Enter") {
             lisaaTehtava(e.target.value);
             e.target.value = null;

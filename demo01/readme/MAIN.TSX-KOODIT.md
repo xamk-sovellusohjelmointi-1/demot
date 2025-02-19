@@ -39,7 +39,7 @@ React-juuri luodaan kutsumalla Reactin `react-dom/client`-moduulista importattua
 
 Määrityksen perässä oleva huutomerkki `!` on TypeScriptin "Non-Null Assertion" -operaattori, joka kertoo, että viitattava elementti ei koskaan ole `null`. Jos pitää hiirtä hetken `getElementById`-metodin päällä, VS Coden aputyökalu näyttää lyhyen kuvauksen metodin säännöistä ja täällä kerrotaan, että metodin palautuksena voi tulla joko HTMLElement tai `null`-arvo, jos annetulla id:llä ei löytynyt HTML-elementtiä. Nyt tiedämme, että olemme määrittäneet sovelluksen sisääntulopisteessä div-elementin id:llä "root", joten emme koskaan saa palautuksena `null`-arvoa.
 
-![](../public/img/document-element-return-types.jpg)
+![](./img/document-element-return-types.jpg)
 
 Juuren luovan metodin perään on suoraan ketjutettu `render`-metodi, joka määrittää komponenttien tulostamisen annettuun juureen. Yllä olevan koodin voisi myös muotoilla niin, että ensin luodaan React-juurelle muuttuja, jonka arvoksi määritetään ´createRoot´-muodostin samalla HTML-elementin viittauksella ja tämän jälkeen omassa komennossaan tehtäisiin renderöinti.
 

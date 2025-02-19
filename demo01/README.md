@@ -1,4 +1,4 @@
-# Demo 1: Hello World
+# Demo 1: React-perusteita, Hello World
 
 Tässä demossa luodaan ensimmäinen React web-sovellus käyttäen Vite-kehitysympäristöä, puhutaan Vite + React -projektista. Voit tarkastella demon koodeja, lukea README-dokumentaatiota ja kommentoida koodia ja kokeilla tehdä muutoksia.
 
@@ -13,6 +13,17 @@ Demo 1 on perinteinen Hello World -sovellus, jossa tulostetaan käyttäjälle pe
 7. React-komponentin ohjaus ehtorakenteella
 
 Demossa kaikki oleellinen ohjelmointi tapahtuu [App.tsx](./src/App.tsx) -komponenttiin ja CSS-tyylitiedostoihin. Demoa varten Vite:n starter-projektista on poistettu kaikki ylimääräinen grafiikka ja tyylittelyt, jotta liikkuvat osat minimoitaisiin opiskelun helpottamiseksi.
+
+#### Demon asentaminen
+
+Voit asentaa demon koneellesi näillä ohjeilla:
+
+- Kloonaa koko demo-repositorio koneellesi
+- Avaa demokansio VS Codessa
+- Suorita komentokehotteessa (Terminal) komento:
+    - `npm install`
+- Käynnistä sovellus komennolla:
+    - `npm run dev`
 
 ## Sisällys
 
