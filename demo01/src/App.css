@@ -1,10 +1,22 @@
 button, input {
-    border : solid 1px #ccc;
-    padding: 5px;
+    border : solid 1px #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button {
+    width: 150px;
+    background-color: rgb(46, 80, 192);
+    color: white;
+}
+
+input {
+    margin-right: 20px;
+    min-width: 400px;
 }
 
 .tervehdysteksti {
     margin-top : 10px;
     border : solid 1px #ccc;
-    padding: 5px;
+    padding: 20px;
 }

@@ -7,19 +7,15 @@ const App : React.FC = () : React.ReactElement => {
   const [nimi, setNimi] = useState<string>("");
 
   const sanoHeippa = () : void => {
-
     setTervehdys(`Tervehdys, ${nimi}!`);
-
   }
 
   return (
     <>
-    
       <h1>Demo 1: React-perusteita</h1>
-      
       <h2>"Hello world!"</h2>
 
-      <input type="text" placeholder="Anna nimesi..." onChange={ ( e ) => { setNimi(e.target.value) } } />
+      <input type="text" placeholder="Anna nimesi..." onChange={ (e) => { setNimi(e.target.value); } } />
 
       <button onClick={sanoHeippa}>Sano heippa</button>
 
@@ -29,8 +25,6 @@ const App : React.FC = () : React.ReactElement => {
           </div> 
         : null
       }
-
-      
     </>
   );
 }
