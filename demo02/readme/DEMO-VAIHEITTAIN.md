@@ -1,5 +1,7 @@
 ### Lähtötilanne
 
+### [<- Takaisin](../README.md)
+
 #### 1. Vite + React -projektin alustus
 
 Demo alkaa siitä, että VS Codessa on alustettu uuteen demo02 -projektikansioon Vite + React -projekti, `react-ts` templatella ja käynnistetty sen kehityspalvelin:
