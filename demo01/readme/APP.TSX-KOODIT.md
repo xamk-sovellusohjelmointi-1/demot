@@ -2,7 +2,7 @@
 
 ### [<- Takaisin](../README.md)
 
-[App.tsx](../src/App.tsx) on ensimmäinen React-komponentti, jota ohjelmoimme demoissa. Reactin komponentit toteutetaat nykyään funktionaalisina komponentteina, eli ne ovat teknisesti vain funktiota, joissa suoritetaan komentoja ja tehdään palautuksena (return) varsinainen HTML-muotoinen sisältö, joka näytetään [sisääntulopisteessä](../index.html).
+[App.tsx](../src/App.tsx) on ensimmäinen React-komponentti, jota ohjelmoimme demoissa. Reactin komponentit toteutetaan nykyään funktionaalisina komponentteina, eli ne ovat teknisesti vain funktiota, joissa suoritetaan komentoja ja tehdään palautuksena (return) varsinainen HTML-muotoinen sisältö, joka näytetään [sisääntulopisteessä](../index.html).
 
 Käydään alla komponentin toiminnallisuus ja koodit tarkemmin läpi
 
@@ -15,7 +15,9 @@ import './App.css';
 
 Tuodaan komponentin tarvitsemat moduulit. Tässä demossa on toteutettu tilamuuttujia hyödyntävä "Hello World"-sovellus, joten tuodaan Reactin "core"-ominaisuuksista [`useState`-hook](https://react.dev/reference/react/useState "https://react.dev/reference/react/useState") tilamuuttujien käsittelyä varten. Tuodaan myös App-komponentin muotoiluun käytettävät tyylit omasta [tyylitiedostostaan](../src/App.css).
 
-**Huomioi**, että Reactin ominaisuudet tuodaan `node_modules`-kansiosta, jolloin niihin viitataan tämän kansion alla olevan kansion nimellä, joka on samalla kyseisen moduulin nimi. Esimerkiksi Reactin ominaisuudet tuodaan nimellä 'react', koska tämä on kansion nimi `node_modules`:n alla. Toisaalta App.css -tiedosto ei ole Node-riippuvuutena asennettu moduuli, vaan osa React-sovelluksen omia [lähdekoodeja](../src/), jolloin se tuodaan suhteellisen polun viittauksella `./App.css`. Piste `.` viittaa suorittavan tiedoston sijaintiin (suorittava tiedosto on tämä App.tsx-komponentti, joka on src-kansiossa). Koska App.css-tyylitiedosto on samassa kansiossa, viitataan kauttaviivan `/` jälkeen suoraan tiedoston nimeen.
+**Huomioi**, että Reactin ominaisuudet tuodaan `node_modules`-kansiosta, jolloin niihin viitataan tämän kansion alla olevan React-kansion nimellä, joka on samalla moduulin nimi. Esimerkiksi Reactin ominaisuudet tuodaan nimellä 'react', koska tämä on kansion nimi `node_modules`:n alla.
+
+Toisaalta App.css -tiedosto ei ole Node-riippuvuutena asennettu moduuli, vaan osa React-sovelluksen omia [lähdekoodeja](../src/), jolloin se tuodaan suhteellisen polun viittauksella `./App.css`. Piste `.` viittaa suorittavan tiedoston sijaintiin (suorittava tiedosto on tämä App.tsx-komponentti, joka on src-kansiossa). Koska App.css-tyylitiedosto on samassa kansiossa, viitataan kauttaviivan `/` jälkeen suoraan tiedoston nimeen.
 
 ## 2. App-komponentin määrittäminen
 
@@ -144,13 +146,13 @@ Tapahtuman tiedot ovat yleensä olioita ja tapahtumat sisältävät paljon erila
     type="text"
     placeholder="Anna nimesi..."
     onChange={ ( e ) => {
-                            setNimi(e.target.value);
-                            console.log(e);}
-            }
+      setNimi(e.target.value);
+      console.log(e);}
+    }
 />
 ```
 
-Tarkastellaan tapahtumaa selaimen kehittäjätyökaluilla (F12) komentokehotteessa (console). Input-kentän `onChange`-tapahtuma sisältää kuvan mukaisia tietoja
+Tarkastellaan tapahtumaa selaimen kehittäjätyökaluilla (F12) komentokehotteessa (console). Input-kentän `onChange`-tapahtuma sisältää kuvan mukaisia tietoja:
 
 ![](../public/img/onChange-tapahtuman-tiedot.jpg)
 
@@ -164,9 +166,9 @@ Tapahtuman tulostus voidaan myös tarkentaa tulostamaan vain `e.target.value` -t
 <button onClick={sanoHeippa}>Sano heippa</button>
 ```
 
-Painikkeella on `onClick`-tapahtumakäsittelijä. Tässä kutsutaan ylempänä koodissa määritettyä `sanoHeippa`-metodia, joka yhdistää kirjoitetun nimen tervehdykseen. Metodeja voidaan siis määrittää erikseen tai suoraan tapahtuman callbackiin nuolifunktiolla (kuten input-kentässä).
+Painikkeella on `onClick`-tapahtumakäsittelijä. Tässä kutsutaan ylempänä koodissa määritettyä `sanoHeippa`-metodia, joka yhdistää kirjoitetun nimen tervehdykseen. Metodeja voidaan siis määrittää erikseen (ja kutsua sitten tapahtumassa) tai suoraan tapahtuman callbackissa nuolifunktiolla (kuten input-kentässä).
 
-### Tervehdyksen tulostuksen ohjaus ehtorakenteella
+### 5.4 Tervehdyksen tulostuksen ohjaus ehtorakenteella
 
 JSX-merkinnässä voidaan myös ohjata tulostusta ehdollisesti. JSX-merkkaukseen ei voida kirjoittaa if-else-lauseita, joten ehdon tarkistus pitää toteuttaa ternary-operaattorilla, jonka syntaksi on:
 
@@ -178,7 +180,7 @@ Ternary-rakenne voidaan rivittää luettavuuden parantamiseksi. Toiminnallisesti
 {(Boolean(tervehdys)) 
     ? <div className="tervehdysteksti">
         {tervehdys}
-        </div> 
+      </div> 
     : null
 }
 ```

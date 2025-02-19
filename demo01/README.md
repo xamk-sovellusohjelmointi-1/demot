@@ -12,7 +12,7 @@ Demo 1 on perinteinen Hello World -sovellus, jossa tulostetaan käyttäjälle pe
 6. Tapahtumia ja tapahtumakäsittelijöitä (Events)
 7. React-komponentin ohjaus ehtorakenteella
 
-Demossa kaikki oleellinen ohjelmointi tapahtuu [App.tsx](./src/App.tsx) -komponenttiin ja CSS-tyylitiedostoihin. Demoa varten Vite:n startter-projektista on poistettu kaikki ylimääräinen grafiikka ja tyylittelyt, jotta liikkuvat osat minimoitaisiin opiskelun helpottamiseksi.
+Demossa kaikki oleellinen ohjelmointi tapahtuu [App.tsx](./src/App.tsx) -komponenttiin ja CSS-tyylitiedostoihin. Demoa varten Vite:n starter-projektista on poistettu kaikki ylimääräinen grafiikka ja tyylittelyt, jotta liikkuvat osat minimoitaisiin opiskelun helpottamiseksi.
 
 ## Sisällys
 
